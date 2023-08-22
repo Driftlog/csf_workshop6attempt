@@ -1,0 +1,14 @@
+<h1>{{city}}</h1>
+<br>
+<button type="button" [routerLink]="['/']"> Back </button>
+
+<p *ngIf="queryWeather">
+  <span>{{queryWeather.id}}</span>
+  <br>
+  <span>{{queryWeather.main}}</span>
+  <br>
+  <span>{{queryWeather.description}}</span>
+  <br>
+  <img [src]="queryWeather.icon">
+
+</p>

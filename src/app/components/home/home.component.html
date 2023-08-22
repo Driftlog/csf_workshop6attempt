@@ -1,0 +1,10 @@
+<h1> City: </h1>
+<form [formGroup]="cityForm" (ngSubmit)="addCity()">
+  <input formControlName="city" type="text">
+  <button type="submit" > Add City </button>
+</form>
+
+<table *ngFor="let city of cityArr">
+  <tr><a [routerLink]="['/displayWeather']" [queryParams]="{q: city}"> {{city}} </a></tr>
+</table>
+
